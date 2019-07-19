@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "node ./src/server.js",
+    "build": "next build ./src",
+    "start": "NODE_ENV=production node ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,39 @@
   },
   "homepage": "https://github.com/luthfib/subud-enterprise#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "connect-redis": "^3.4.1",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.0.0",
+    "dotenv-webpack": "^1.7.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "isomorphic-fetch": "^2.2.1",
     "next": "^9.0.2",
+    "passport": "^0.4.0",
+    "passport-auth0": "^1.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-dom": "^16.8.6",
+    "redis": "^2.8.0",
+    "send": "^0.17.1",
+    "styled-components": "^4.3.2",
+    "uid-safe": "^2.1.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "prettier": "^1.18.2"
   }
 }
